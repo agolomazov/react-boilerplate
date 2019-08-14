@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const appDirectory = fs.realpathSync(process.pwd());
+const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath = path.resolve(appDirectory, relativePath);
 
 module.exports = {
@@ -10,5 +10,5 @@ module.exports = {
   appConfig: resolveApp('config'),
   appHtml: resolveApp('src/index.html'),
   appIndexJs: resolveApp('src/index.js'),
-  appSrc: resolveApp('src'), 
+  appSrc: resolveApp('src'),
 }
